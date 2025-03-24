@@ -36,17 +36,17 @@ defaults
 
 
 
-frontend alain_frontend
+frontend alain_front
         bind *:80
         mode http
-        default_backend alain_frontend
+        default_backend alain_front
 
-frontend alain_frontend_secured
+frontend alain_front_secured
         bind *:443 ssl crt /etc/haproxy/certs/www.ai-ngabo.tech.pem
         http-request redirect scheme https unless { ssl_fc }
-        default_backend alain_backend
+        default_backend alain_backe
 
-backend alain_backend
+backend alain_back
         balance roundrobin
         server 6414-web-01 3.82.215.250:80 check
         server 6414-web-02 3.89.115.73:80 check
