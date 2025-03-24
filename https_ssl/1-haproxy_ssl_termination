@@ -48,5 +48,5 @@ frontend alain_front_secured
 
 backend alain_back
         balance roundrobin
-        server 6414-web-01 3.82.215.250:80 check
-        server 6414-web-02 3.89.115.73:80 check
+        server 6444-web-01 3.82.215.250:80 check
+        server 6444-web-02 3.89.115.73:80 check
