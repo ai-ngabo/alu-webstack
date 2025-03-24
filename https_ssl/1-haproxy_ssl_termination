@@ -44,7 +44,7 @@ frontend alain_front
 frontend alain_front_secured
         bind *:443 ssl crt /etc/haproxy/certs/www.ai-ngabo.tech.pem
         http-request redirect scheme https unless { ssl_fc }
-        default_backend alain_backe
+        default_backend alain_back
 
 backend alain_back
         balance roundrobin
